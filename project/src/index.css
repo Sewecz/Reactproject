@@ -5,9 +5,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+button{
+  padding: 8px;
+  border-radius:13px ;
+  border: darkviolet 4px solid;
+  margin: 2px;
+  width: 100px;
+}
+.onegame{
+  background-color: white;
+  float: left;
+  border: 2px black solid;
+  border-radius: 12px;
+   width: 150px;
+   height: 200px;
+   padding: 25px;
+   font-size: 16px;
+   margin: 3px;
+}
+img{
+  width: 100px;
+  height: 100px;
+}
+footer{
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: cadetblue;
+  text-align: right;
+  font-size: 20px;
 }
