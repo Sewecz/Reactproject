@@ -5,21 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: whitesmoke;
+  background-color: rgb(247, 241, 230);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-button{
+.buttonsl{
+  text-align: center;
+}
+.buttonsleft{
   padding: 8px;
   border-radius:13px ;
   border: darkviolet 4px solid;
   margin: 2px;
   width: 100px;
 }
+.buttonsleft:hover{
+  padding: 8px;
+  border-radius:13px ;
+  background-color: darkviolet;
+  color:white;
+  border: darkviolet 4px solid;
+  margin: 2px;
+  width: 100px;
+
+}
 .onegame{
+  text-align: center;
   background-color: white;
   float: left;
   border: 2px black solid;
@@ -62,4 +76,19 @@ footer{
   padding: 3px;
   text-align: center;
   color: black;
+}
+.rightpanel{
+float: right;
+  position: sticky;
+}
+h1{
+  margin: 30px;
+  text-align: left;
+  color: black;
+}
+p{
+  text-align: center;
+  color: gray;
+  width: 100%;
+  height: 60px;
 }

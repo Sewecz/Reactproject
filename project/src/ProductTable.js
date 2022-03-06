@@ -6,13 +6,16 @@ constructor(props){
     super(props)
     this.state ={
         productList: [],
-        selectedMonth: props.selectedMonths
+        selectedMonth: props.selectedmonth
     }
     
-    this.popProductsTable()
+    this.popProductsTable();
+    
 }
 componentWillReceiveProps(props){
-    this.state.selectedMonth = props.selectedMonths
+    this.state.selectedMonth = props.selectedmonth;
+    this.updateTable()
+    console.log(this.state.selectedMonth)
 }
 popProductsTable(){
     for (var key in TableProducts) {
@@ -22,7 +25,6 @@ popProductsTable(){
             })
         }
     }
-    console.log(key);
 }
 updateTable(){
     this.setState({
@@ -33,18 +35,17 @@ updateTable(){
             if(this.state.selectedMonth!==null&&this.state.selectedMonth.toString()===TableProducts[key]["month"]){
                 this.state.productList.push(<Product index={key}/>)
             }else if(this.state.selectedMonth===null){
-                this.state.productList.push(<Product  index={key}/>)
+                this.state.productList.push(<Product index={key}/>)
             }
-        }
+        }   
     }
 }
 render(){
-    console.log(this.state.productList);
-    return(<div>
+ 
+    return(
            <div>
-                {this.state.productList.map((item, index)=>(<div key={index}>{item}</div>))}
-            </div>
-    </div>);
+                {this.state.productList.map((item)=>(<div>{item}</div>))}
+            </div>);
 }
 }
 export default ProductTabel;
