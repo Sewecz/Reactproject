@@ -1,16 +1,18 @@
 import React from 'react';
-import Products from './produtcs';
-import Tableproducts from './TableProducts.json';
+
+
 class Filtr extends React.Component{
     constructor(props){
         super(props)
-        this.state={searchQuery: ""
+        this.state={
+       selectedmonth: 0,
     }
-    
+   
 }
-handleClickMonths(props){
-    <Products><Tableproducts></Tableproducts></Products>
+handleClickMonths(month){
+    this.props.handleSearchBarInput(month)
 }
+
 render(){
     return( <div>
         <button onClick={()=>this.handleClickMonths(1)}>January</button>

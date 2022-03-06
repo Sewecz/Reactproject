@@ -1,25 +1,24 @@
 import React from 'react';
-import style from './style.css';
-import Search from './Search.js';
 import Filtr from './flitr';
-import Products from './produtcs';
+import ProductTabel from './ProductTable';
  class Mainwindow extends React.Component {
  constructor(props){
      super(props)
      this.state={
-
+        selectedmonth:null
      }
  }
  
-componentWillReceiveProps(props){
-
+ handleSearchBarInput = ( month) =>{
+    this.setState({
+        selectedmonth: month
+    })
 }
 
  render(){
-     return(<div><Search></Search> 
-    <Filtr></Filtr>
-    <Products></Products>
-    <footer>created by xyz</footer>
+     return(<div>
+    <Filtr handleSearchBarInput={this.handleSearchBarInput}></Filtr>
+    <ProductTabel selectedmonth={this.state.selectedmonth}></ProductTabel>
      </div>);
  }
  }

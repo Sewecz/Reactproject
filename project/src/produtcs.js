@@ -4,23 +4,19 @@ import photo from './photos/static.png';
 class Product extends React.Component{
  constructor(props){
      super(props);
-     this.state={
-         
+      this.state={
      }
- }
- render(){
 
-     return(<div>
+ }
+
+ render(){
+     return(
         <div className="onegame">
-         <img src={photo}/>
-        <ProductLabel index={1}></ProductLabel>
-       <ProductName index={1}></ProductName>
+        <ProductLabel index={this.props.index}></ProductLabel>
+         <img src={photo}  alt="xyz"/>
+       <ProductName index={this.props.index}></ProductName>
      </div>
-     <div className="onegame">
-         <img src={photo}/>
-        <ProductLabel index={2}></ProductLabel>
-       <ProductName index={2}></ProductName>  </div>
-       </div>);
+       );
  }
 }
 export default Product;
