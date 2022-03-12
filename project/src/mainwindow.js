@@ -6,24 +6,26 @@ import ProductTabel from './ProductTable';
  constructor(props){
      super(props)
      this.state={
-        selectedmonth:null
+        selectedmonth:null,
+        selectedyear:null
      }
  }
  
- handleSearchBarInput = (month) =>{
+ handlefiltr = (month,year) =>{
     this.setState({
-        selectedmonth: month
+        selectedmonth: month,
+        selectedyear:year
     })
 
 }
 
  render(){
-
+console.log(this.state.selectedyear);
      return(<div>
-     <p><h1>Nowe Planszówki</h1> </p>
-    <Filtr handleSearchBarInput={this.handleSearchBarInput}></Filtr>
-    <p><h2>Kalendarz premier i dodruków</h2></p>
-    <ProductTabel selectedmonth={this.state.selectedmonth}></ProductTabel>
+     <h1>Nowe Planszówki</h1><br/>
+    <Filtr handlefiltr={this.handlefiltr}></Filtr>
+    <h2>Kalendarz premier i dodruków</h2>
+    <ProductTabel selectedmonth={this.state.selectedmonth} selectedyear={this.state.selectedyear}></ProductTabel>
      </div>);
  }
  }

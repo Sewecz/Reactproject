@@ -13,23 +13,25 @@ code {
     monospace;
 }
 .buttonsl{
-  text-align: center;
+ margin-left: 20px;
 }
 .buttonsleft{
-  padding: 8px;
+  font-size: 12px;
+  padding: 6px;
   border-radius:13px ;
-  border: darkviolet 4px solid;
+  border: darkviolet 3px solid;
   margin: 2px;
-  width: 100px;
+  width: 80px;
 }
 .buttonsleft:hover{
-  padding: 8px;
+  font-size: 8px;
+  padding: 6px;
   border-radius:13px ;
   background-color: darkviolet;
   color:white;
-  border: darkviolet 4px solid;
+  border: darkviolet 3px solid;
   margin: 2px;
-  width: 100px;
+  width: 70px;
 
 }
 .onegame{
@@ -50,7 +52,6 @@ img{
   height: 100px;
 }
 footer{
-  
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -85,10 +86,12 @@ h1{
   margin: 30px;
   text-align: left;
   color: black;
+  float: left;
 }
-p{
+h2{
   text-align: center;
   color: gray;
   width: 100%;
   height: 60px;
 }
+
