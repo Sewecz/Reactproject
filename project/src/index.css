@@ -12,6 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+p{
+  float: left;
+}
 .buttonsl{
  margin-left: 20px;
 }
@@ -88,6 +91,7 @@ h1{
   color: black;
   float: left;
 }
+
 h2{
   text-align: center;
   color: gray;
